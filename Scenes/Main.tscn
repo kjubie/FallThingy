@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dw0tsa7sh7iok"]
+
+[ext_resource type="Script" path="res://Scripts/Main.gd" id="1_g1w2b"]
+[ext_resource type="PackedScene" uid="uid://cac3j5msnue5p" path="res://Scenes/Player.tscn" id="2_sph0v"]
+[ext_resource type="PackedScene" uid="uid://cfvhqqhub70ny" path="res://Scenes/World.tscn" id="3_iaopb"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_g1w2b")
+player_scene = ExtResource("2_sph0v")
+
+[node name="World" parent="." instance=ExtResource("3_iaopb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5252, -59.7455, 40.5013)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.990392, -0.0601953, 0.124503, 0, 0.900296, 0.435278, -0.138292, 0.431096, -0.891646, 0, 4.47351, -11.3616)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
